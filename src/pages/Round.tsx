@@ -32,8 +32,8 @@ function Round({ roundNumber }: { roundNumber: number }) {
         // Aca iria un renderizado condicional, si se tocaron los botones 10 veces
         // O la ronda esta finalizada renderiza el boton que dice 'comenzar segunda ronda'
         // Sino los botones del juego
+        // los componentes son: <GameButtons/> y <FinishedRound/>
       }
-      <GameButtons/>
     </RoundContainer>
   )
 }
