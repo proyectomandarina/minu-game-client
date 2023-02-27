@@ -1,11 +1,11 @@
 import assetsPath from "../../data/assets-path"
-import { LanguageSelectorContainer } from "./components"
+import { LanguageIcon, LanguageSelectorContainer } from "./components"
 
 export default function LanguageSelector() {
   return (
     <LanguageSelectorContainer>
-        <object data={assetsPath.arrowBottom}/>
-        <object data={assetsPath.languageIcon} className='bordered'/>
+        <LanguageIcon data={assetsPath.arrowBottom}/>
+        <LanguageIcon data={assetsPath.languageIcon} className='bordered'/>
     </LanguageSelectorContainer>
   )
 }

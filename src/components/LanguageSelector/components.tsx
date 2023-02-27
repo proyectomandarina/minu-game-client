@@ -5,5 +5,9 @@ export const LanguageSelectorContainer = styled.div`
     padding: 1em;
     display: flex;
     justify-content: flex-end;
-    gap: 10px;
+    gap: 1em;
+`
+
+export const LanguageIcon = styled.object`
+    width: 2em;
 `
