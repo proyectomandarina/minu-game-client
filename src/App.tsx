@@ -1,10 +1,11 @@
 import Game from "./components/Game"
-import Home from "./pages/Home"
+// import Home from "./pages/Home"
+import Round from "./pages/Round"
 
 function App() {
   return (
     <Game>
-      <Home/>
+      <Round roundNumber={1}></Round>
     </Game>
   )
 }

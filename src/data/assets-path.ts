@@ -7,7 +7,9 @@ const assetsPath = {
     startButton: '../assets/start-button.svg',
     footer: '../assets/footer.svg',
     logoVialEducation: '../assets/logo-educacion-vial.png',
-    logoMinuLegend: '../assets/logo-minu-leyenda.png'
+    logoMinuLegend: '../assets/logo-minu-leyenda.png',
+    gameButtons: [],
+    cross: ''
 }
 
 export default assetsPath

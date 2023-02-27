@@ -25,7 +25,7 @@ function Home() {
       <LanguageSelector />
       <img src={assetsPath.dontDistract}/>
       <Alert>¡CUANDO MANEJAMOS TODA NUESTRA ATENCION DEBE ESTAR EN LA CALLE</Alert>
-      <StartButton/>
+      <StartButton>COMENZAR</StartButton>
       <Button>Instrucciones</Button>
       <Button>Contacto</Button>
       <Footer/>
