@@ -8,7 +8,7 @@ const assetsPath = {
     footer: '../assets/footer.svg',
     logoVialEducation: '../assets/logo-educacion-vial.png',
     logoMinuLegend: '../assets/logo-minu-leyenda.png',
-    gameButtons: [],
+    gameButtons: ['test','test','test','test','test','test'],
     cross: ''
 }
 

@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import Counter from "../components/Counter"
 import FinishedRound from "../components/FinishedRound"
+import GameButtons from "../components/GameButtons"
 import QuitGame from "../components/QuitGame"
 import theme from "../data/theme"
 
@@ -32,7 +33,7 @@ function Round({ roundNumber }: { roundNumber: number }) {
         // O la ronda esta finalizada renderiza el boton que dice 'comenzar segunda ronda'
         // Sino los botones del juego
       }
-      <FinishedRound />
+      <GameButtons/>
     </RoundContainer>
   )
 }
