@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import theme from "../../data/theme";
 
-const Alert = styled.p`
+const Alert = styled.div`
     background-color: ${theme.alertColor};
     width: 90%;
     margin: auto;

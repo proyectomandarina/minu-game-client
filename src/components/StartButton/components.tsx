@@ -9,12 +9,13 @@ export const StartButtonContainer = styled.div`
 `
 
 export const StartButtonSvg = styled.object`
-    width: 60%
+    width: 40vw
 `
 
 export const StartLegend = styled.p`
     color: ${theme.white};
     -webkit-text-stroke: 2px ${theme.borderTextColor};
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
+    text-align: center;
 `
