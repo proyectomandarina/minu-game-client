@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
 
-export interface GameContainerProps {
+export interface GameProps {
     children: ReactElement | ReactElement[]
 }

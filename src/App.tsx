@@ -1,13 +1,10 @@
-import GameContainer from "./components/GameContainer"
+import Game from "./components/Game"
 
 function App() {
-
   return (
-    <div className="App">
-      <GameContainer>
-        
-      </GameContainer>
-    </div>
+    <Game>
+      <p>Here is the game!</p>
+    </Game>
   )
 }
 
