@@ -4,6 +4,7 @@ import LanguageSelector from "../components/LanguageSelector";
 import StartButton from "../components/StartButton";
 import Button from "../components/Button";
 import assetsPath from "../data/assets-path";
+import Footer from "../components/Footer";
 
 const HomeContainer = styled.div`
   position: relative;
@@ -27,6 +28,7 @@ function Home() {
       <StartButton/>
       <Button>Instrucciones</Button>
       <Button>Contacto</Button>
+      <Footer/>
     </HomeContainer>
   )
 }

@@ -4,7 +4,10 @@ const assetsPath = {
     languageIcon: '../assets/language-icon.svg',
     arrowBottom: '../assets/bottom-arrow.svg',
     dontDistract: '../assets/no-te-distraigas-blanco.png',
-    startButton: '../assets/start-button.svg'
+    startButton: '../assets/start-button.svg',
+    footer: '../assets/footer.svg',
+    logoVialEducation: '../assets/logo-educacion-vial.png',
+    logoMinuLegend: '../assets/logo-minu-leyenda.png'
 }
 
 export default assetsPath
