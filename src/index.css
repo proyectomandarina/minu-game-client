@@ -7,3 +7,8 @@
 .turned {
     transform: rotate(180deg);
 }
+
+.bordered {
+    border: 1.5px solid #ffffff;
+    border-radius: 99999px;
+}

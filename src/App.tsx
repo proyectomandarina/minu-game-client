@@ -1,9 +1,10 @@
 import Game from "./components/Game"
+import Home from "./pages/Home"
 
 function App() {
   return (
     <Game>
-      <p>Here is the game!</p>
+      <Home/>
     </Game>
   )
 }
