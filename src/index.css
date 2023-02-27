@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+button {
+    border: inherit;
+    background-color: inherit;
+}
+
 .turned {
     transform: rotate(180deg);
 }

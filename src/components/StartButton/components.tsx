@@ -5,12 +5,11 @@ export const StartButtonContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width:100%;
     gap: 10px;
 `
 
 export const StartButtonSvg = styled.object`
-    width: 40%
+    width: 70%
 `
 
 export const StartLegend = styled.p`
