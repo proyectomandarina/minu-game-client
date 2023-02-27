@@ -3,7 +3,8 @@ const assetsPath = {
     bgLines: '../assets/background-lines.svg',
     languageIcon: '../assets/language-icon.svg',
     arrowBottom: '../assets/bottom-arrow.svg',
-    dontDistract: '../assets/no-te-distraigas-blanco.png'
+    dontDistract: '../assets/no-te-distraigas-blanco.png',
+    startButton: '../assets/start-button.svg'
 }
 
 export default assetsPath

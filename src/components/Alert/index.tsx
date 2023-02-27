@@ -5,8 +5,9 @@ const Alert = styled.p`
     background-color: ${theme.alertColor};
     width: 90%;
     margin: auto;
-    padding: 1em 2em;
+    padding: 0.5em 1em;
     text-align: center;
+    font-weight: bold;
 `
 
 export default Alert
