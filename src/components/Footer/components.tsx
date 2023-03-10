@@ -4,11 +4,8 @@ import assetsPath from "../../data/assets-path";
 export const FooterContainer = styled.div`
     background-image: url(${assetsPath.footer});
     background-size: cover;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    background-position: 0% 0%;
     width:100%;
-    height: 15%;
     padding: 1em 2em;
     display: grid;
     grid-template-columns: 50% 50%;
@@ -16,5 +13,5 @@ export const FooterContainer = styled.div`
 `
 
 export const FooterSvg = styled.object`
-    height: 100%;
+    height: 30vw;
 `
