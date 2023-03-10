@@ -7,7 +7,6 @@ export const LanguageSelectorContainer = styled.div`
     justify-content: flex-end;
     gap: 1em;
 `
-
 export const LanguageIcon = styled.object`
     width: 2em;
 `

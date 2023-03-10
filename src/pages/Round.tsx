@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 import styled from "styled-components"
 import Counter from "../components/Counter"
 import FinishedRound from "../components/FinishedRound"
@@ -23,17 +25,23 @@ const RoundContainer = styled.div`
 `
 
 function Round({ roundNumber }: { roundNumber: number }) {
+
+  const [touches, setTouches] = useState(0)
+  const navigate = useNavigate();
+
+  useEffect(()=>{
+    if (touches>=10 && roundNumber===2) navigate('/end')
+  }, [touches])
+
   return (
     <RoundContainer>
       {QuitGame}
       <h2 className='roundTitle'>Ronda {roundNumber}</h2>
       <Counter roundNumber={roundNumber} time={2000} />
       {
-        // Aca iria un renderizado condicional, si se tocaron los botones 10 veces
-        // O la ronda esta finalizada renderiza el boton que dice 'comenzar segunda ronda'
-        // Sino los botones del juego
-        // los componentes son: <GameButtons/> y <FinishedRound/>
-        <GameButtons/>
+        touches >= 10 
+        ? roundNumber === 1 ? <FinishedRound/> : null
+        : <GameButtons/>
       }
     </RoundContainer>
   )
