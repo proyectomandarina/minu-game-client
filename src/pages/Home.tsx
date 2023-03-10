@@ -18,6 +18,12 @@ const HomeContainer = styled.div`
     margin: auto;
   }
 `
+const HomeButtons = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+`
 
 function Home() {
   return (
@@ -26,8 +32,10 @@ function Home() {
       <img src={assetsPath.dontDistract}/>
       <Alert>¡CUANDO MANEJAMOS TODA NUESTRA ATENCION DEBE ESTAR EN LA CALLE</Alert>
       <StartButton>COMENZAR</StartButton>
-      <Button>Instrucciones</Button>
-      <Button>Contacto</Button>
+      <HomeButtons>
+        <Button>Instrucciones</Button>
+        <Button>Contacto</Button>
+      </HomeButtons>
       <Footer/>
     </HomeContainer>
   )

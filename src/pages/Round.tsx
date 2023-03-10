@@ -33,7 +33,7 @@ function Round({ roundNumber }: { roundNumber: number }) {
         // O la ronda esta finalizada renderiza el boton que dice 'comenzar segunda ronda'
         // Sino los botones del juego
         // los componentes son: <GameButtons/> y <FinishedRound/>
-        <FinishedRound/>
+        <GameButtons/>
       }
     </RoundContainer>
   )
