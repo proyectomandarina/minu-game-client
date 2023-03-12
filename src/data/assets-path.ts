@@ -9,7 +9,7 @@ const assetsPath = {
     logoVialEducation: '../assets/logo-educacion-vial.png',
     logoMinuLegend: '../assets/logo-minu-leyenda.png',
     gameButtons: ['test','test','test','test','test','test'],
-    cross: ''
+    cross: '../assets/cross.svg'
 }
 
 export default assetsPath

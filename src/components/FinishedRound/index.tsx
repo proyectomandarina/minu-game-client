@@ -4,7 +4,7 @@ import { FinishAlert, FinishedRoundContainer } from "./components";
 export default function FinishedRound() {
     return (
         <FinishedRoundContainer>
-            <StartButton>COMENZAR SEGUNDA RONDA</StartButton>
+            <StartButton route="/round/2">COMENZAR SEGUNDA RONDA</StartButton>
             <FinishAlert>
                 <h2>SE VIENEN LAS DISTRACCIONES</h2>
                 <p>

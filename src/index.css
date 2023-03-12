@@ -10,6 +10,11 @@ button {
     background-color: inherit;
 }
 
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
 .turned {
     transform: rotate(180deg);
 }

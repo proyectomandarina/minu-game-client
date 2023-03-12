@@ -31,7 +31,7 @@ function Home() {
       <LanguageSelector />
       <img src={assetsPath.dontDistract}/>
       <Alert>¡CUANDO MANEJAMOS TODA NUESTRA ATENCION DEBE ESTAR EN LA CALLE</Alert>
-      <StartButton>COMENZAR</StartButton>
+      <StartButton route="/round/1">COMENZAR</StartButton>
       <HomeButtons>
         <Button>Instrucciones</Button>
         <Button>Contacto</Button>

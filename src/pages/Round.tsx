@@ -35,7 +35,7 @@ function Round({ roundNumber }: { roundNumber: number }) {
 
   return (
     <RoundContainer>
-      {QuitGame}
+      <QuitGame/>
       <h2 className='roundTitle'>Ronda {roundNumber}</h2>
       <Counter roundNumber={roundNumber} time={2000} />
       {
