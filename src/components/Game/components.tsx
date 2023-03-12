@@ -2,8 +2,8 @@ import styled from "styled-components";
 import theme from "../../data/theme";
 
 export const GameContainer = styled.div`
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: ${theme.bgColor};
 `
 

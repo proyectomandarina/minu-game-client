@@ -8,7 +8,6 @@ import QuitGame from "../components/QuitGame"
 import theme from "../data/theme"
 
 const RoundContainer = styled.div`
-    height: 100%;
     position: relative;
     z-index: 10;
     display: flex;

@@ -6,8 +6,8 @@ import QuitGame from "../components/QuitGame"
 import theme from "../data/theme"
 
 const EndGameContainer = styled.div`
-    height: 100%;
     width: 100%;
+    height: 100vh;
     position: relative;
     z-index: 10;
     display: flex;
@@ -39,7 +39,7 @@ const TimeWatchingThePhone = styled.div`
 function EndGame() {
     return (
         <EndGameContainer>
-            {QuitGame}
+            <QuitGame/>
             <h2 className="roundTitle">Fin del juego</h2>
             <Popup>
                 <h3>¿Cumpliste de verdad las consignas distractivas?</h3>
