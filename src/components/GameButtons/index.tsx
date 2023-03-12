@@ -7,7 +7,7 @@ export default function GameButtons() {
         {
             assetsPath.gameButtons.map((button, i) => {
                 return (
-                    <Button key={i}>{button}</Button> // Aca van los botones en forma de <object>
+                    <Button key={i} src={button}/> 
                 )
             })
         }

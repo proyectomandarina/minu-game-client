@@ -9,5 +9,8 @@ export const ButtonsContainer = styled.div`
 
 `
 
-export const Button = styled.object`
+export const Button = styled.img`
+    border-radius: 9999px;
+    width: 100%;
+    height: 100%;
 `
