@@ -13,8 +13,10 @@ const RoundContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3em;
-    padding:2em 0;
+    justify-content: start;
+    min-height: 100vh;
+    gap:3em;
+    padding: 1em 2em;
     .roundTitle{
         color:${theme.white};
         font-weight:bold;
@@ -40,7 +42,7 @@ function Round({ roundNumber }: { roundNumber: number }) {
       {
         touches >= 10 
         ? roundNumber === 1 ? <FinishedRound/> : null
-        : <GameButtons/>
+        : <GameButtons oneMoreTouch={()=>setTouches(touches+1)}/>
       }
     </RoundContainer>
   )
