@@ -1,4 +1,6 @@
+import { STEPS } from "../../types";
+
 export interface StartButtonProps {
     children: string;
-    route: string;
+    step: STEPS
 }

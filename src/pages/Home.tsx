@@ -45,7 +45,6 @@ const MarginedHome = styled.div`
 `;
 
 function Home() {
-  console.log("hola.");
   const { ctx, setCtx } = useContext(GameContext);
 
   return (
@@ -56,6 +55,7 @@ function Home() {
         <Alert>
           ¡CUANDO MANEJAMOS TODA NUESTRA ATENCION DEBE ESTAR EN LA CALLE
         </Alert>
+        <StartButton step={STEPS.STEP_1}>Comenzar</StartButton>
         <HomeButtons>
           <Button>Instrucciones</Button>
           <Button onClick={() => setCtx(setStep(STEPS.STEP_1, ctx))}>
