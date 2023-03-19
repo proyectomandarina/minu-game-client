@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import styled from "styled-components";
 import Counter from "../components/Counter";
 import FinishedRound from "../components/FinishedRound";
@@ -24,26 +23,14 @@ const RoundContainer = styled.div`
 
 function Round({ roundNumber }: { roundNumber: number }) {
   const [touches, setTouches] = useState(0);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (touches >= 10 && roundNumber === 2) navigate("/end");
-  }, [touches]);
 
   return (
     <RoundContainer>
-      <QuitGame />
       <div>
         <h2 className="roundTitle">Ronda {roundNumber}</h2>
         <Counter roundNumber={roundNumber} time={2000} />
       </div>
-      {touches >= 10 ? (
-        roundNumber === 1 ? (
-          <FinishedRound />
-        ) : null
-      ) : (
-        <GameButtons oneMoreTouch={() => setTouches(touches + 1)} />
-      )}
+      <GameButtons oneMoreTouch={() => setTouches(touches + 1)} />
     </RoundContainer>
   );
 }

@@ -1,18 +1,18 @@
 import assetsPath from "../../data/assets-path";
-import { BgSvg, BgSvgContainer, GameContainer, GameRoot } from "./components";
-import { GameProps } from "./types";
+import { BgSvg, BgSvgContainer, Container, Root } from "./components";
+import { BgProps } from "./types";
 
-function Game({ children }: GameProps) {
+function Background({ children }: BgProps) {
   return (
-    <GameContainer>
+    <Container>
       <BgSvgContainer>
         <BgSvg data={assetsPath.bgCubes} />
         <BgSvg data={assetsPath.bgLines} />
         <BgSvg data={assetsPath.bgCubes} className="turned" />
       </BgSvgContainer>
-      <GameRoot>{children}</GameRoot>
-    </GameContainer>
+      <Root>{children}</Root>
+    </Container>
   );
 }
 
-export default Game;
+export default Background;

@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import theme from "../../data/theme";
 
-export const GameContainer = styled.div`
+export const Container = styled.div`
     height: 100vh;
   position: relative;
   background-color: ${theme.bgColor};
 `;
 
-export const GameRoot = styled.div`
+export const Root = styled.div`
   position: relative;
   z-index: 20;
   height: 100%;

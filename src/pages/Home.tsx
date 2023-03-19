@@ -6,6 +6,10 @@ import Button from "../components/Button";
 import assetsPath from "../data/assets-path";
 import Footer from "../components/Footer";
 
+import { STEPS } from "../types";
+import { GameContext, setStep } from "../context";
+import { useContext } from "react";
+
 const HomeContainer = styled.div`
   height: 100%;
   display: flex;
@@ -41,6 +45,9 @@ const MarginedHome = styled.div`
 `;
 
 function Home() {
+  console.log("hola.");
+  const { ctx, setCtx } = useContext(GameContext);
+
   return (
     <HomeContainer>
       <LanguageSelector />
@@ -49,10 +56,11 @@ function Home() {
         <Alert>
           ¡CUANDO MANEJAMOS TODA NUESTRA ATENCION DEBE ESTAR EN LA CALLE
         </Alert>
-        <StartButton route="/round/1">COMENZAR</StartButton>
         <HomeButtons>
           <Button>Instrucciones</Button>
-          <Button>Contacto</Button>
+          <Button onClick={() => setCtx(setStep(STEPS.STEP_1, ctx))}>
+            Contacto
+          </Button>
         </HomeButtons>
       </MarginedHome>
       <Footer />
