@@ -4,7 +4,6 @@ import theme from "../../data/theme";
 const Alert = styled.div`
     background-color: ${theme.alertColor};
     width: 90%;
-    margin: auto;
     padding: 0.5em 1em;
     text-align: center;
     font-weight: bold;

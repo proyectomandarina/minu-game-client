@@ -7,11 +7,11 @@ export const FooterContainer = styled.div`
     background-position: 0% 0%;
     width:100%;
     padding: 1em 2em;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    justify-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
 `
 
 export const FooterSvg = styled.object`
-    height: 30vw;
+    height: 8em;
 `

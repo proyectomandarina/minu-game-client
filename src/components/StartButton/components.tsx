@@ -9,7 +9,7 @@ export const StartButtonContainer = styled.div`
 `
 
 export const StartButtonSvg = styled.object`
-    width: 40vw
+    width: 10em;
 `
 
 export const StartLegend = styled.p`

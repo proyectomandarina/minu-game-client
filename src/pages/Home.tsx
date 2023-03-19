@@ -7,38 +7,57 @@ import assetsPath from "../data/assets-path";
 import Footer from "../components/Footer";
 
 const HomeContainer = styled.div`
-  position: relative;
-  z-index: 20;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 30px;
-  img{
+  img {
     width: 80%;
-    margin: auto;
   }
-`
+`;
+
 const HomeButtons = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 30px;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+`;
 
-`
+const MarginedHome = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 0 auto;
+  @media screen and (min-width: 1024px) {
+    width: 60%;
+  }
+`;
 
 function Home() {
   return (
     <HomeContainer>
       <LanguageSelector />
-      <img src={assetsPath.dontDistract}/>
-      <Alert>¡CUANDO MANEJAMOS TODA NUESTRA ATENCION DEBE ESTAR EN LA CALLE</Alert>
-      <StartButton route="/round/1">COMENZAR</StartButton>
-      <HomeButtons>
-        <Button>Instrucciones</Button>
-        <Button>Contacto</Button>
-      </HomeButtons>
-      <Footer/>
+      <MarginedHome>
+        <img src={assetsPath.dontDistract} />
+        <Alert>
+          ¡CUANDO MANEJAMOS TODA NUESTRA ATENCION DEBE ESTAR EN LA CALLE
+        </Alert>
+        <StartButton route="/round/1">COMENZAR</StartButton>
+        <HomeButtons>
+          <Button>Instrucciones</Button>
+          <Button>Contacto</Button>
+        </HomeButtons>
+      </MarginedHome>
+      <Footer />
     </HomeContainer>
-  )
+  );
 }
 
-export default Home
+export default Home;

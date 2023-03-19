@@ -6,7 +6,7 @@ const QuitGame = styled.object`
   position: fixed;
   top: 1em;
   right: 2em;
-  width: 5vw;
+  width: 1em;
   z-index: 1000;
 `
 

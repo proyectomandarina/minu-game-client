@@ -6,7 +6,7 @@ const Button = styled.button`
     border-radius: ${theme.borderRadius};
     color: ${theme.white};
     padding: 0.5em 1em;
-    font-size: 1.5em;
+    font-size: 3em;
 `
 
 export default Button
