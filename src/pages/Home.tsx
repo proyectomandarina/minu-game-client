@@ -8,7 +8,8 @@ import Footer from "../components/Footer";
 
 import { STEPS } from "../types";
 import { GameContext, setStep } from "../context";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
+import { INITIAL_CTX } from "../constants";
 
 const HomeContainer = styled.div`
   height: 100%;
@@ -46,6 +47,10 @@ const MarginedHome = styled.div`
 
 function Home() {
   const { ctx, setCtx } = useContext(GameContext);
+
+  useEffect(()=>{
+    setCtx(INITIAL_CTX);
+  });
 
   return (
     <HomeContainer>

@@ -12,8 +12,8 @@ export enum STEPS {
 
 export interface Ctx {
   step: STEPS;
-  firstTime: number;
-  secondTime: number;
+  firstTime: string;
+  secondTime: string;
   hasFinish: boolean;
 }
 

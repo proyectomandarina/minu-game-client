@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Home from "./pages/Home";
 import { Ctx, STEPS } from "./types";
 import { GameContext } from "./context";
@@ -8,6 +8,10 @@ import Background from "./components/Background";
 
 function App() {
   const [ctx, setCtx] = useState<Ctx>(INITIAL_CTX);
+
+  useEffect(()=>{
+    console.log({ctx});
+  },[ctx])
 
   const renderCurrentStep = () => {
     switch (ctx.step) {

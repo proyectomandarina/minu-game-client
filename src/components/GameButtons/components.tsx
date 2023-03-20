@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { GameButtonProps } from "./types";
 
 export const ButtonsContainer = styled.div`
   display: grid;
@@ -13,8 +14,10 @@ export const ButtonsContainer = styled.div`
   }
 `;
 
-export const Button = styled.img`
+export const Button = styled.img<GameButtonProps>`
   border-radius: 9999px;
   width: 100%;
   height: 100%;
+  border: ${(props)=>props.active ? '5px solid rgb(0,255,0)': ''};
+  border: ${(props)=>props.wrong ? '5px solid red': ''};
 `;

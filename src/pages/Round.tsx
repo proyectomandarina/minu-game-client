@@ -1,9 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import Counter from "../components/Counter";
-import FinishedRound from "../components/FinishedRound";
 import GameButtons from "../components/GameButtons";
-import QuitGame from "../components/QuitGame";
 import theme from "../data/theme";
 
 const RoundContainer = styled.div`
