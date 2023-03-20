@@ -57,8 +57,10 @@ function Home() {
         </Alert>
         <StartButton step={STEPS.STEP_1}>Comenzar</StartButton>
         <HomeButtons>
-          <Button>Instrucciones</Button>
-          <Button onClick={() => setCtx(setStep(STEPS.STEP_1, ctx))}>
+          <Button onClick={() => setCtx(setStep(STEPS.INSTRUCTIONS, ctx))}>
+            Instrucciones
+          </Button>
+          <Button onClick={() => setCtx(setStep(STEPS.CONTACT, ctx))}>
             Contacto
           </Button>
         </HomeButtons>
