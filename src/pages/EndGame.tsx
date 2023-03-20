@@ -2,13 +2,14 @@ import styled from "styled-components"
 import Alert from "../components/Alert"
 import Button from "../components/Button"
 import Popup from "../components/Popup"
-import QuitGame from "../components/QuitGame"
+import { useContext } from "react"
+import { GameContext } from "../context"
+import { setStep } from "../context"
+import { STEPS } from "../types"
 import theme from "../data/theme"
 
 const EndGameContainer = styled.div`
-    width: 100%;
-    position: relative;
-    z-index: 10;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,9 +37,10 @@ const TimeWatchingThePhone = styled.div`
 `
 
 function EndGame() {
+    const { ctx, setCtx } = useContext(GameContext);
+
     return (
         <EndGameContainer>
-            <QuitGame/>
             <h2 className="roundTitle">Fin del juego</h2>
             <Popup>
                 <h3>¿Cumpliste de verdad las consignas distractivas?</h3>
@@ -50,8 +52,8 @@ function EndGame() {
                 </TimeWatchingThePhone>
             </Popup>
             <ButtonsContainer>
-                <Button>Volver a jugar</Button>
-                <Button>Contacto</Button>
+                <Button onClick={() => setCtx(setStep(STEPS.HOME, ctx))}>Volver a jugar</Button>
+                <Button onClick={() => setCtx(setStep(STEPS.CONTACT, ctx))}>Contacto</Button>
             </ButtonsContainer>
         </EndGameContainer>
     )

@@ -1,10 +1,11 @@
 import StartButton from "../StartButton";
 import { FinishAlert, FinishedRoundContainer } from "./components";
+import { STEPS } from "../../types";
 
 export default function FinishedRound() {
     return (
         <FinishedRoundContainer>
-            <StartButton route="/round/2">COMENZAR SEGUNDA RONDA</StartButton>
+            <StartButton step={STEPS.STEP_2}>COMENZAR SEGUNDA RONDA</StartButton>
             <FinishAlert>
                 <h2>SE VIENEN LAS DISTRACCIONES</h2>
                 <p>

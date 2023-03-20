@@ -5,6 +5,8 @@ import { GameContext } from "./context";
 import { INITIAL_CTX } from "./constants";
 import Round from "./pages/Round";
 import Background from "./components/Background";
+import FinishedRound from "./components/FinishedRound";
+import EndGame from "./pages/EndGame";
 
 function App() {
   const [ctx, setCtx] = useState<Ctx>(INITIAL_CTX);
@@ -21,6 +23,10 @@ function App() {
         return <Round roundNumber={1} />;
       case STEPS.STEP_2:
         return <Round roundNumber={2} />;
+      case STEPS.MIDDLE:
+        return <FinishedRound/>;
+      case STEPS.END:
+        return <EndGame/>;
       default:
         return <p>No step</p>;
     }

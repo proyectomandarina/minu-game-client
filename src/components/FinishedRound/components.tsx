@@ -3,7 +3,10 @@ import Alert from "../Alert";
 import theme from '../../data/theme'
 
 export const FinishedRoundContainer = styled.div`
-    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 `   
 
 export const FinishAlert = styled(Alert)`
@@ -17,7 +20,6 @@ export const FinishAlert = styled(Alert)`
     text-align: start;
     border-radius: ${theme.borderRadius} ${theme.borderRadius} 0 0;
     padding: 2em 1em;
-    height:20vh;
     overflow:scroll;
 
     h2{
