@@ -20,15 +20,13 @@ const RoundContainer = styled.div`
 `;
 
 function Round({ roundNumber }: { roundNumber: number }) {
-  const [touches, setTouches] = useState(0);
-
   return (
     <RoundContainer>
       <div>
         <h2 className="roundTitle">Ronda {roundNumber}</h2>
         <Counter roundNumber={roundNumber} time={2000} />
       </div>
-      <GameButtons oneMoreTouch={() => setTouches(touches + 1)} />
+      <GameButtons/>
     </RoundContainer>
   );
 }
