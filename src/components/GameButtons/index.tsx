@@ -3,15 +3,10 @@ import assetsPath from "../../data/assets-path";
 import { ButtonsContainer, Button } from "./components";
 import { STEPS } from "./../../types";
 import { GameContext } from "./../../context";
-import { formatMilliseconds } from "./../../constants";
 
 const BUTTON_IDS = [1, 2, 3, 4, 5, 6];
 
 const LOOP_NUMBERS = 12;
-
-const highlightSelectedBtn = (id: string) => {
-  // modifica los css
-};
 
 const generateRandomBtnId = (id: number | undefined) => {
   let options = BUTTON_IDS;
@@ -52,11 +47,11 @@ export default function GameButtons() {
         setCtx({
           ...ctx,
           step: STEPS.MIDDLE,
-          firstTime: formatMilliseconds(ms),
+          firstTime: ms,
         });
       }
       if (ctx.step === STEPS.STEP_2) {
-        setCtx({ ...ctx, step: STEPS.END, secondTime: formatMilliseconds(ms) });
+        setCtx({ ...ctx, step: STEPS.END, secondTime: ms });
       }
 
       return;
