@@ -7,6 +7,7 @@ import { GameContext } from "../context"
 import { setStep } from "../context"
 import { STEPS } from "../types"
 import theme from "../data/theme"
+import Quit from "../components/Quit"
 
 const EndGameContainer = styled.div`
     height: 100%;
@@ -41,6 +42,7 @@ function EndGame() {
 
     return (
         <EndGameContainer>
+            <Quit/>
             <h2 className="roundTitle">Fin del juego</h2>
             <Popup>
                 <h3>¿Cumpliste de verdad las consignas distractivas?</h3>
