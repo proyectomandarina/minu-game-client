@@ -17,6 +17,14 @@ const assetsPath = {
     "../assets/train.png",
   ],
   cross: "../assets/cross.svg",
+  km15: "../assets/15.svg",
+  km30: "../assets/30.svg",
+  km50: "../assets/50.svg",
+  km80: "../assets/80.svg",
+  km110: "../assets/110.svg",
+  car: "../assets/Auto.svg",
+  bicicle: "../assets/Bicicleta.svg",
+  person: "../assets/Persona.svg",
 };
 
 export default assetsPath;
