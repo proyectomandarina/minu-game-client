@@ -19,13 +19,19 @@ const RoundContainer = styled.div`
   }
 `;
 
+const CounterContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
 function Round({ roundNumber }: { roundNumber: number }) {
   return (
     <RoundContainer>
-      <div>
+      <CounterContainer>
         <h2 className="roundTitle">Ronda {roundNumber}</h2>
         <Counter roundNumber={roundNumber} time={2000} />
-      </div>
+      </CounterContainer>
       <GameButtons/>
     </RoundContainer>
   );

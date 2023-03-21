@@ -11,10 +11,6 @@ import EndGame from "./pages/EndGame";
 function App() {
   const [ctx, setCtx] = useState<Ctx>(INITIAL_CTX);
 
-  useEffect(()=>{
-    console.log({ctx});
-  },[ctx])
-
   const renderCurrentStep = () => {
     switch (ctx.step) {
       case STEPS.HOME:

@@ -8,6 +8,5 @@ export const GameContext = React.createContext<StateContext>({
 });
 
 export const setStep = (step:STEPS, ctx:Ctx) => {
-  console.log({step})
     return {...ctx, step: step};
 };
