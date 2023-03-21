@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Home from "./pages/Home";
 import { Ctx, STEPS } from "./types";
 import { GameContext } from "./context";
 import { INITIAL_CTX } from "./constants";
 import Round from "./pages/Round";
 import Background from "./components/Background";
-import FinishedRound from "./components/FinishedRound";
-import EndGame from "./pages/EndGame";
+import Middle from "./pages/Middle";
+import End from "./pages/End";
+import Manual from "./pages/Manual";
+import Contact from "./pages/Contact";
 
 function App() {
   const [ctx, setCtx] = useState<Ctx>(INITIAL_CTX);
@@ -20,9 +22,13 @@ function App() {
       case STEPS.STEP_2:
         return <Round roundNumber={2} />;
       case STEPS.MIDDLE:
-        return <FinishedRound/>;
+        return <Middle/>;
       case STEPS.END:
-        return <EndGame/>;
+        return <End/>;
+      case STEPS.INSTRUCTIONS:
+        return <Manual/>;
+      case STEPS.CONTACT:
+        return <Contact/>
       default:
         return <p>No step</p>;
     }

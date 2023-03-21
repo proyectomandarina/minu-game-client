@@ -1,11 +1,13 @@
 import styled from "styled-components";
+import theme from "../../data/theme";
 
 export const LanguageSelectorContainer = styled.div`
-    width:100%;
+    background-color: ${theme.white};
+    border-radius: ${theme.borderRadius};
     padding: 1em;
     display: flex;
-    justify-content: flex-end;
-    gap: 1em;
+    align-items: center;
+    gap: 10px;
 `
 export const LanguageIcon = styled.object`
     width: 2em;

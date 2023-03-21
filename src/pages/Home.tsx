@@ -10,6 +10,7 @@ import { STEPS } from "../types";
 import { GameContext, setStep } from "../context";
 import { useContext, useEffect } from "react";
 import { INITIAL_CTX } from "../constants";
+import TopBar from "../components/TopBar";
 
 const HomeContainer = styled.div`
   height: 100%;
@@ -54,7 +55,9 @@ function Home() {
 
   return (
     <HomeContainer>
-      <LanguageSelector />
+      <TopBar>
+        <LanguageSelector />
+      </TopBar>
       <MarginedHome>
         <img src={assetsPath.dontDistract} />
         <Alert>
