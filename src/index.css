@@ -21,8 +21,3 @@ a {
 .turned {
     transform: rotate(180deg);
 }
-
-.bordered {
-    border: 1.5px solid #000000;
-    border-radius: 99999px;
-}

@@ -10,7 +10,7 @@ const TopBarContainer = styled.div<TopBarProps>`
   padding: 10px 20px;
   display: flex;
   justify-content: ${(props) =>
-    props.count === 1 ? "flex-end" : "space-evenly"};
+    props.count === 1 ? "flex-end" : "space-between"};
 `;
 
 export default function TopBar({

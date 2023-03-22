@@ -3,7 +3,7 @@ import Alert from "../Alert";
 import theme from '../../data/theme'
 
 export const FinishedRoundContainer = styled.div`
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;

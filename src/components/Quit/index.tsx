@@ -11,15 +11,15 @@ const QuitContainer = styled.div`
     right: 20px;
 `
 
-const Cross = styled.object`
+const Cross = styled.img`
     width: 1.5em;
 `
 
 export default function Quit() {
 const { ctx, setCtx } = useContext(GameContext);
   return (
-    <QuitContainer onClick={() => setCtx(setStep(STEPS.INSTRUCTIONS, ctx))}>
-        <Cross data={assetsPath.cross}/>
+    <QuitContainer onClick={() => setCtx(setStep(STEPS.HOME, ctx))}>
+        <Cross src={assetsPath.cross}/>
     </QuitContainer>
   )
 }

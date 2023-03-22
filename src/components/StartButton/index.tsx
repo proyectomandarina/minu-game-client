@@ -13,7 +13,7 @@ export default function StartButton({ children, step }: StartButtonProps) {
   const { ctx, setCtx } = useContext(GameContext);
   return (
     <StartButtonContainer onClick={() => setCtx(setStep(step, ctx))}>
-      <StartButtonSvg data={assetsPath.startButton} />
+      <StartButtonSvg src={assetsPath.startButton} pointer-events="none" />
       <StartLegend>{children}</StartLegend>
     </StartButtonContainer>
   );

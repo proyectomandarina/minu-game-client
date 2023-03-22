@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styled from "styled-components";
 import Counter from "../components/Counter";
 import GameButtons from "../components/GameButtons";
@@ -6,7 +5,7 @@ import Quit from "../components/Quit";
 import theme from "../data/theme";
 
 const RoundContainer = styled.div`
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;

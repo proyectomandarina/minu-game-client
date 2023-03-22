@@ -14,7 +14,7 @@ import { formatMilliseconds, MESSAGES } from "../constants";
 const MIN_TIME_DIF_ALLOWED = 2000;
 
 const EndGameContainer = styled.div`
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;

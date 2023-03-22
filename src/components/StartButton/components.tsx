@@ -8,7 +8,7 @@ export const StartButtonContainer = styled.div`
     gap: 10px;
 `
 
-export const StartButtonSvg = styled.object`
+export const StartButtonSvg = styled.img`
     width: 10em;
 `
 

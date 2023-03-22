@@ -4,6 +4,9 @@ import Footer from "../components/Footer";
 import theme from "../data/theme";
 import TopBar from "../components/TopBar";
 import LanguageSelector from "../components/LanguageSelector";
+import BackArrow from "../components/BackArrow";
+import { STEPS } from "../types";
+import Alert from "../components/Alert";
 
 const Container = styled.div`
   height: 100%;
@@ -11,13 +14,17 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 1em;
+  gap: 2em;
 `;
 const ImgContainer = styled.div`
   width: 80%;
   img {
     width: 100%;
     height: 100%;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 50%;
   }
 `;
 
@@ -31,6 +38,11 @@ const RulesContainer = styled.div`
   padding: 40px;
   border-radius: ${theme.borderRadius};
   border: 2px solid ${theme.white};
+  scroll-behavior: auto; 
+
+  @media screen and (min-width: 1024px) {
+    width: 60%;
+  }
 `;
 
 const RulesTitle = styled.h3`
@@ -39,11 +51,16 @@ const RulesTitle = styled.h3`
 const RulesDescription = styled.p`
   color: ${theme.white};
 `;
+const RulesList = styled.ul``;
+const RulesItem = styled.li`
+  color: ${theme.white};
+`;
 
 export default function Manual() {
   return (
     <Container>
       <TopBar>
+        <BackArrow page={STEPS.HOME} />
         <LanguageSelector />
       </TopBar>
       <ImgContainer>
@@ -61,6 +78,26 @@ export default function Manual() {
           siendo distraído. Lo ideal es que juegues con un celular aparte del
           dispositivo en el que corre el juego. Otra persona te va a dar
           consignas distractivas que tenés que cumplir:
+        </RulesDescription>
+        <Alert>Distracciones</Alert>
+        <RulesList>
+          <RulesItem>Escribi un Whatsapp que diga 'yendo'.</RulesItem>
+          <RulesItem>
+            Envia un audio de Whatsapp contando que queres cenar hoy.
+          </RulesItem>
+          <RulesItem>
+            Busca la direccion de tu casa en Google Maps o Waze y dale iniciar
+            al viaje.
+          </RulesItem>
+          <RulesItem>
+            Elegi una cancion en Spotify o aplicaciones de reproduccion de
+            musica y darle play.
+          </RulesItem>
+        </RulesList>
+        <RulesDescription>
+          Estos son solo ejemplos de las muchas cosas con las que alguien podria
+          ditraerse al manejar. Durante la segunda ronda, quien te distraiga
+          debe decirte dos consignas para que cumplas mientras jugas.
         </RulesDescription>
       </RulesContainer>
       <Footer />

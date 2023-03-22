@@ -2,7 +2,6 @@ import styled from "styled-components";
 import theme from "../../data/theme";
 
 export const Container = styled.div`
-    height: 100vh;
   position: relative;
   background-color: ${theme.bgColor};
 `;

@@ -13,9 +13,9 @@ import { INITIAL_CTX } from "../constants";
 import TopBar from "../components/TopBar";
 
 const HomeContainer = styled.div`
-  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-items: space-between;
   gap: 30px;
   img {
     width: 80%;

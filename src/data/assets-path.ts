@@ -1,7 +1,8 @@
 const assetsPath = {
   bgCubes: "../assets/background-cubes.svg",
   bgLines: "../assets/background-lines.svg",
-  languageIcon: "../assets/language-icon.svg",
+  languageIcon: "../assets/idioma.svg",
+  arrowBack: '../assets/back.svg',
   arrowBottom: "../assets/bottom-arrow.svg",
   dontDistract: "../assets/no-te-distraigas-blanco.png",
   startButton: "../assets/start-button.svg",
