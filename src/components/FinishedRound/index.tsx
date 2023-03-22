@@ -5,7 +5,7 @@ import Quit from '../Quit/index'
 
 export default function FinishedRound() {
     return (
-        <FinishedRoundContainer>
+        <FinishedRoundContainer id='middle-container'>
             <Quit/>
             <StartButton step={STEPS.STEP_2}>COMENZAR SEGUNDA RONDA</StartButton>
             <FinishAlert>

@@ -4,14 +4,13 @@ import assetsPath from "../../data/assets-path";
 export const FooterContainer = styled.div`
     background-image: url(${assetsPath.footer});
     background-size:cover;
-    width:100%;
-    height: 100%;
-    padding: 0em 2em;
+    padding: 0.5em 2em;
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap:wrap;
 `
 // hp-setup
 export const FooterSvg = styled.object`
-    height: 7em;
+    width: 7em;
 `

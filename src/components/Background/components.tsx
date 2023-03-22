@@ -1,19 +1,20 @@
 import styled from "styled-components";
 import theme from "../../data/theme";
 
-export const Container = styled.div`
-  position: relative;
-  background-color: ${theme.bgColor};
-`;
+export const Container = styled.div``;
 
 export const Root = styled.div`
-  position: relative;
-  z-index: 20;
+  position: fixed;
+  width: 100%;
   height: 100%;
-`
+  z-index: 10;
+  overflow-y: scroll;
+`;
 
 export const BgSvgContainer = styled.div`
-  position: absolute;
+  background-color: ${theme.bgColor};
+  position: fixed;
+  z-index: 1;
   width: 100%;
   height: 100%;
   top: 0;
@@ -24,11 +25,11 @@ export const BgSvgContainer = styled.div`
 
 export const BgSvg = styled.object`
   width: 100%;
-  height: 100%;
   object-fit: cover;
   @media screen and (min-width: 1024px) {
-    &:first-child, &:nth-child(3){
-      display:none;
+    &:first-child,
+    &:nth-child(3) {
+      display: none;
     }
   }
 `;

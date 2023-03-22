@@ -13,9 +13,11 @@ import { INITIAL_CTX } from "../constants";
 import TopBar from "../components/TopBar";
 
 const HomeContainer = styled.div`
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-items: space-between;
+  justify-content: space-between;
+  align-items: center;
   gap: 30px;
   img {
     width: 80%;
@@ -34,13 +36,11 @@ const HomeButtons = styled.div`
 `;
 
 const MarginedHome = styled.div`
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   gap: 30px;
-  margin: 0 auto;
   @media screen and (min-width: 1024px) {
     width: 60%;
   }
@@ -49,12 +49,12 @@ const MarginedHome = styled.div`
 function Home() {
   const { ctx, setCtx } = useContext(GameContext);
 
-  useEffect(()=>{
+  useEffect(() => {
     setCtx(INITIAL_CTX);
   });
 
   return (
-    <HomeContainer>
+    <HomeContainer id="home-container">
       <TopBar>
         <LanguageSelector />
       </TopBar>

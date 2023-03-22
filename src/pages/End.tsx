@@ -14,7 +14,7 @@ import { formatMilliseconds, MESSAGES } from "../constants";
 const MIN_TIME_DIF_ALLOWED = 2000;
 
 const EndGameContainer = styled.div`
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,7 +52,7 @@ const getFormatTime = (ctx: Ctx): number => {
 function EndGame() {
   const { ctx, setCtx } = useContext(GameContext);
   return (
-    <EndGameContainer>
+    <EndGameContainer id="end-container">
       <Quit />
       <h2 className="roundTitle">Fin del juego</h2>
       <Popup>
