@@ -1,34 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState } from "react";
+import Home from "./pages/Home";
+import { Ctx, STEPS } from "./types";
+import { GameContext } from "./context";
+import { INITIAL_CTX } from "./constants";
+import Round from "./pages/Round";
+import Background from "./components/Background";
+import Middle from "./pages/Middle";
+import End from "./pages/End";
+import Manual from "./pages/Manual";
+import Contact from "./pages/Contact";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [ctx, setCtx] = useState<Ctx>(INITIAL_CTX);
+
+  const renderCurrentStep = () => {
+    switch (ctx.step) {
+      case STEPS.HOME:
+        return <Home />;
+      case STEPS.STEP_1:
+        return <Round roundNumber={1} />;
+      case STEPS.STEP_2:
+        return <Round roundNumber={2} />;
+      case STEPS.MIDDLE:
+        return <Middle/>;
+      case STEPS.END:
+        return <End/>;
+      case STEPS.INSTRUCTIONS:
+        return <Manual/>;
+      case STEPS.CONTACT:
+        return <Contact/>
+      default:
+        return <p>No step</p>;
+    }
+  };
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    <GameContext.Provider value={{ ctx, setCtx }}>
+      <Background>{renderCurrentStep()}</Background>
+    </GameContext.Provider>
+  );
 }
 
-export default App
+export default App;
