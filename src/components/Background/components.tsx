@@ -13,7 +13,7 @@ export const Root = styled.div`
 `
 
 export const BgSvgContainer = styled.div`
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
@@ -24,7 +24,6 @@ export const BgSvgContainer = styled.div`
 
 export const BgSvg = styled.object`
   width: 100%;
-  height: 100%;
   object-fit: cover;
   @media screen and (min-width: 1024px) {
     &:first-child, &:nth-child(3){
