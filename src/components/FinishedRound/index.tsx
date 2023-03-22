@@ -11,7 +11,7 @@ export default function FinishedRound() {
             <FinishAlert>
                 <h2>SE VIENEN LAS DISTRACCIONES</h2>
                 <p>
-                    Ahora hay que estar atento a las peticiones que te va a 
+                    Ahora hay que estar atento a las consignas que te va a 
                     decir tu capacitador y no perder la atencion a las luces 
                     que se van a encender
                 </p>
