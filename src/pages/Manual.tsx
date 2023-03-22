@@ -14,7 +14,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 2em;
+  gap: 30px;
 `;
 const ImgContainer = styled.div`
   width: 80%;
@@ -58,7 +58,7 @@ const RulesItem = styled.li`
 
 export default function Manual() {
   return (
-    <Container>
+    <Container id="manual-container">
       <TopBar>
         <BackArrow page={STEPS.HOME} />
         <LanguageSelector />

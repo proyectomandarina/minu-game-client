@@ -5,12 +5,12 @@ import { BgProps } from "./types";
 function Background({ children }: BgProps) {
   return (
     <Container>
-      <BgSvgContainer>
+      <BgSvgContainer id="background">
         <BgSvg data={assetsPath.bgCubes} />
         <BgSvg data={assetsPath.bgLines} />
         <BgSvg data={assetsPath.bgCubes} className="turned" />
       </BgSvgContainer>
-      <Root>{children}</Root>
+      <Root id="root">{children}</Root>
     </Container>
   );
 }
