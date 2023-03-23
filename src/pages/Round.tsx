@@ -31,7 +31,7 @@ function Round({ roundNumber }: { roundNumber: number }) {
       <Quit/>
       <CounterContainer>
         <h2 className="roundTitle">Ronda {roundNumber}</h2>
-        <Counter roundNumber={roundNumber} time={2000} />
+        <Counter round={roundNumber} time={2000} />
       </CounterContainer>
       <GameButtons/>
     </RoundContainer>
