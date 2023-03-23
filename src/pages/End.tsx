@@ -9,7 +9,7 @@ import { setStep } from "../context";
 import { STEPS } from "../types";
 import theme from "../data/theme";
 import Quit from "../components/Quit";
-import { formatMilliseconds, MESSAGES } from "../constants";
+import { formatMilliseconds } from "../constants";
 
 const MIN_TIME_DIF_ALLOWED = 2000;
 
@@ -51,6 +51,9 @@ const getFormatTime = (ctx: Ctx): number => {
 
 function EndGame() {
   const { ctx, setCtx } = useContext(GameContext);
+  
+  const replayRedirect = validateTime(ctx) ? STEPS.HOME : STEPS.MIDDLE;
+
   return (
     <EndGameContainer id="end-container">
       <Quit />
@@ -63,7 +66,7 @@ function EndGame() {
         </TimeWatchingThePhone>
       </Popup>
       <ButtonsContainer>
-        <Button onClick={() => setCtx(setStep(STEPS.HOME, ctx))}>
+        <Button onClick={() => setCtx(setStep(replayRedirect, ctx))}>
           Volver a jugar
         </Button>
         <Button onClick={() => setCtx(setStep(STEPS.CONTACT, ctx))}>
