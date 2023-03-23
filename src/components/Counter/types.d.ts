@@ -1,4 +1,4 @@
 export interface CounterProps {
-    roundNumber: number;
+    round: number | string;
     time: number;
 }
