@@ -63,7 +63,7 @@ function Home() {
         <Alert>
           ¡CUANDO MANEJAMOS TODA NUESTRA ATENCION DEBE ESTAR EN LA CALLE
         </Alert>
-        <StartButton step={STEPS.STEP_1}>Comenzar</StartButton>
+        <StartButton step={STEPS.STEP_1}>COMENZAR</StartButton>
         <HomeButtons>
           <Button onClick={() => setCtx(setStep(STEPS.INSTRUCTIONS, ctx))}>
             Instrucciones

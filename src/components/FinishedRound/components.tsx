@@ -7,7 +7,10 @@ export const FinishedRoundContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-`   
+    align-items: center;
+    gap: 2em;
+    padding-bottom: 68px;
+`
 
 export const FinishAlert = styled(Alert)`
     position: fixed;
@@ -27,4 +30,8 @@ export const FinishAlert = styled(Alert)`
         font-weight: bold;
     }
 
+`
+
+export const FinishedRoundTitle = styled.h2`
+    color: ${theme.white}
 `
