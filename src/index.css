@@ -8,9 +8,10 @@
     font-family: 'Raleway', sans-serif;
 }
 
-button {
+button, input, textarea {
     border: inherit;
     background-color: inherit;
+    outline: inherit;
 }
 
 a {

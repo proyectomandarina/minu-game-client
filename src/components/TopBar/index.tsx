@@ -1,8 +1,11 @@
 import { ReactElement } from "react";
 import styled from "styled-components";
 
+type position = "flex-start" | "flex-end";
+
 interface TopBarProps {
   count: number;
+  position?: position;
 }
 
 const TopBarContainer = styled.div<TopBarProps>`
@@ -10,15 +13,21 @@ const TopBarContainer = styled.div<TopBarProps>`
   padding: 10px 20px;
   display: flex;
   justify-content: ${(props) =>
-    props.count === 1 ? "flex-end" : "space-between"};
+    props.count === 1 && props.position ? props.position : "space-between"};
 `;
 
 export default function TopBar({
   children,
+  position,
 }: {
   children: ReactElement | ReactElement[];
+  position?: position;
 }) {
   const childrenCount = Array.isArray(children) ? children.length : 1;
 
-  return <TopBarContainer count={childrenCount}>{children}</TopBarContainer>;
+  return (
+    <TopBarContainer count={childrenCount} position={position}>
+      {children}
+    </TopBarContainer>
+  );
 }

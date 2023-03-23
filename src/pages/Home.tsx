@@ -55,7 +55,7 @@ function Home() {
 
   return (
     <HomeContainer id="home-container">
-      <TopBar>
+      <TopBar position="flex-end">
         <LanguageSelector />
       </TopBar>
       <MarginedHome>

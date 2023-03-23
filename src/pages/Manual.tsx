@@ -60,7 +60,7 @@ export default function Manual() {
   return (
     <Container id="manual-container">
       <TopBar>
-        <BackArrow page={STEPS.HOME} />
+        <BackArrow page={STEPS.HOME} color={theme.white}/>
         <LanguageSelector />
       </TopBar>
       <ImgContainer>
