@@ -33,6 +33,13 @@ const IconsContainer = styled.div`
   }
 `;
 
+const InputInfoContainer = styled.div`
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+`
+
 export default function Contact() {
   return (
     <ContactContainer>
@@ -46,8 +53,10 @@ export default function Contact() {
           <object data={assetsPath.logoVialEducation}></object>
         </IconsContainer>
       </ContactTop>
-      <Input type="email" placeholder="Ingrese su email">Correo electronico</Input>
-      <Textarea placeholder="Ingrese su comentario">Comentarios</Textarea>
+      <InputInfoContainer>
+        <Input type="email" placeholder="Ingrese su email">Correo electronico</Input>
+        <Textarea placeholder="Ingrese su comentario">Comentarios</Textarea>
+      </InputInfoContainer>
       <Button>Enviar</Button>
     </ContactContainer>
   );

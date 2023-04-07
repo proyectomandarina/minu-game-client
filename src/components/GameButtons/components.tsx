@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { GameButtonProps } from "./types";
+import theme from "../../data/theme";
 
 export const ButtonsContainer = styled.div`
   display: grid;
@@ -18,6 +19,7 @@ export const Button = styled.img<GameButtonProps>`
   border-radius: 9999px;
   width: 100%;
   height: 100%;
-  border: ${(props)=>props.wrong ? '5px solid red': ''};
-  border: ${(props)=>props.active ? '5px solid rgb(0,255,0)': ''};
+  box-shadow: ${props=>props.active ? `0px 0px 20px 20px ${theme.ButtonBgColor}` : null};
+  box-shadow: ${props=>props.wrong ? `0px 0px 15px #f00` : null};
+  transition: box-shadow 0.2s ease-in;
 `;
