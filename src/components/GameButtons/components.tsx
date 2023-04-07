@@ -19,7 +19,7 @@ export const Button = styled.img<GameButtonProps>`
   border-radius: 9999px;
   width: 100%;
   height: 100%;
-  box-shadow: ${props=>props.active ? `0px 0px 20px 20px ${theme.ButtonBgColor}` : null};
-  box-shadow: ${props=>props.wrong ? `0px 0px 15px #f00` : null};
+  box-shadow: ${props=>props.active ? `0px 0px 25px 20px ${theme.ButtonBgColor}` : null};
+  box-shadow: ${props=>props.wrong ? `0px 0px 25px 20px #f00` : null};
   transition: box-shadow 0.2s ease-in;
 `;
