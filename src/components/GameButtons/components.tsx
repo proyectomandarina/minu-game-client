@@ -16,6 +16,7 @@ export const ButtonsContainer = styled.div`
 `;
 
 export const Button = styled.img<GameButtonProps>`
+  cursor: pointer;
   border-radius: 9999px;
   width: 100%;
   height: 100%;

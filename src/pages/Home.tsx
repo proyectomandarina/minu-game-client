@@ -53,10 +53,16 @@ function Home() {
     setCtx(INITIAL_CTX);
   });
 
+  const isLanguageSelector = LanguageSelector === undefined
+
   return (
     <HomeContainer id="home-container">
       <TopBar position="flex-end">
-        <LanguageSelector />
+        {
+          isLanguageSelector
+           ? null
+           : <LanguageSelector/>
+        }
       </TopBar>
       <MarginedHome>
         <img src={assetsPath.dontDistract} />

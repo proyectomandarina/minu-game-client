@@ -14,7 +14,7 @@ export const Label = styled.label`
 `;
 
 export const MainInput = styled.input`
-  font-size: 1em;
+  font-size: 0.75em;
   background-color: ${theme.bgColor};
   color: ${theme.white};
   border: 2px solid ${theme.borderTextColor};

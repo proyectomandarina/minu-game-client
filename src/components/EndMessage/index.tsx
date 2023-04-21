@@ -33,7 +33,6 @@ const EndMessage = ({ dif }: { dif: number }) => {
       <h3>{message._title}</h3>
       <h3>{distance && message.title ? message.title(distance) : null}</h3>
       <p>{message.paragraph}</p>
-      <Alert>{message.alert}</Alert>
     </Container>
   );
 };

@@ -7,6 +7,12 @@ const Button = styled.button`
     color: ${theme.white};
     padding: 0.5em 1em;
     font-size: 1.5em;
+    cursor:pointer;
+    &:hover {
+    background-color: ${theme.white};
+    color: ${theme.ButtonBgColor};
+
+    }
 `
 
 export default Button;

@@ -43,8 +43,13 @@ const TimeWatchingThePhone = styled.div`
 
 const validateTime = (ctx: Ctx): boolean =>
   ctx.secondTime - ctx.firstTime > MIN_TIME_DIF_ALLOWED;
+  
 const getFormatTime = (ctx: Ctx): number => {
-  return validateTime(ctx) ? ctx.secondTime - ctx.firstTime : 0;
+  if (validateTime(ctx)){
+    return ctx.secondTime - ctx.firstTime
+  } else {
+    return Math.abs(ctx.secondTime - ctx.firstTime)
+  }
 };
 
 

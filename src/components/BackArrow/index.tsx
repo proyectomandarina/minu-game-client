@@ -7,6 +7,7 @@ import { GameContext } from "../../context";
 
 export const Container = styled.div`
   padding: 1em;
+  cursor:pointer;
 `;
 export const Icon = styled.svg`
   width: 2em;
@@ -43,7 +44,7 @@ export default function BackArrow({ page, color }: { page: STEPS, color: string 
           height="40"
           rx="14"
           stroke={color}
-          stroke-width="2"
+          strokeWidth="2"
         />
       </Icon>
     </Container>

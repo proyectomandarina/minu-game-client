@@ -20,7 +20,7 @@ export default function TopBar({
   children,
   position,
 }: {
-  children: ReactElement | ReactElement[];
+  children: ReactElement | ReactElement[]| null;
   position?: position;
 }) {
   const childrenCount = Array.isArray(children) ? children.length : 1;
