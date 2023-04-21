@@ -3,7 +3,9 @@ import { LanguageIcon, LanguageSelectorContainer } from "./components"
 
 export default function LanguageSelector() {
   
-  if (false){
+  const languagesLength = 1
+
+  if (languagesLength > 1){
     return (
       <LanguageSelectorContainer>
           <LanguageIcon data={assetsPath.languageIcon}/>
@@ -11,6 +13,8 @@ export default function LanguageSelector() {
       </LanguageSelectorContainer>
     )
   } else {
-    <></>
+    return (
+      <></>
+    )
   }
 }
