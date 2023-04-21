@@ -17,7 +17,7 @@ const Container = styled.div`
   gap: 30px;
 `;
 const ImgContainer = styled.div`
-  width: 80%;
+  width: 70%;
   img {
     width: 100%;
     height: 100%;

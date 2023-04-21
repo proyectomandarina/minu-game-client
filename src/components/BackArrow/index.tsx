@@ -7,6 +7,7 @@ import { GameContext } from "../../context";
 
 export const Container = styled.div`
   padding: 1em;
+  cursor:pointer;
 `;
 export const Icon = styled.svg`
   width: 2em;
