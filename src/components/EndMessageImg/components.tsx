@@ -23,6 +23,8 @@ export const MediumImgContainer = styled.div`
 export const Distance = styled.p`
     font-weight: bold;
     border-bottom: 2px solid #fff;
+    align-self: center;
+    padding-bottom: 10px;
 `
 
 export const MediumImg = styled.object`
