@@ -34,7 +34,7 @@ const IconsContainer = styled.div`
 `;
 
 const InputInfoContainer = styled.div`
-  width: 60vw;
+  width: 60%;
   display: flex;
   flex-direction: column;
   gap: 30px;

@@ -38,7 +38,7 @@ const RulesContainer = styled.div`
   padding: 40px;
   border-radius: ${theme.borderRadius};
   border: 2px solid ${theme.white};
-  scroll-behavior: auto; 
+  overflow-y: scroll;
 
   @media screen and (min-width: 1024px) {
     width: 60%;
