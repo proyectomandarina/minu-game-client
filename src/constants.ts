@@ -36,7 +36,7 @@ export const MESSAGES = [
     alert:
       "EL USAR EL CELULAR CUADRIPLICA NUESTRAS CHANCES DE TENER UN SINIESTRO VIAL",
     velocity: 36.1,
-    velocityImg: assetsPath.km110,
+    velocityImg: assetsPath.km130,
     mediumImg: assetsPath.car
   },
   {
