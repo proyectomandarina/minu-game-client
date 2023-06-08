@@ -23,6 +23,7 @@ const assetsPath = {
   km50: "../assets/50.svg",
   km80: "../assets/80.svg",
   km110: "../assets/110.svg",
+  km130: "../assets/130.svg",
   car: "../assets/Auto.svg",
   bicicle: "../assets/Bicicleta.svg",
   person: "../assets/Persona.svg",
