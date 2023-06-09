@@ -54,7 +54,7 @@ export default function Contact() {
         </IconsContainer>
       </ContactTop>
       <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSdxrwDYhywWGmUNmJsHot6Ctv88MlEEaK8-5rcHxg_e3g0IUA/viewform?embedded=true"
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfrAKZLdUZ6pSLfdL0MMg-X8AuUwXcthsxZ8iGYJs_fmqAEhg/viewform?embedded=true"
         width="1000"
         height="1000"
         frameBorder="0"
