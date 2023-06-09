@@ -32,11 +32,11 @@ export const MESSAGES = [
   {
     max: 5,
     title: (distance: number) =>
-      `En el tiempo que tardaste mirando el celular recorriste ${distance}m por la ruta`,
+      `En el tiempo que tardaste mirando el celular recorriste ${distance}m por la autopista`,
     alert:
       "EL USAR EL CELULAR CUADRIPLICA NUESTRAS CHANCES DE TENER UN SINIESTRO VIAL",
     velocity: 36.1,
-    velocityImg: assetsPath.km110,
+    velocityImg: assetsPath.km130,
     mediumImg: assetsPath.car
   },
   {

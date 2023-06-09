@@ -1,6 +1,5 @@
 import { MESSAGES } from "../../constants";
 import { Container } from "./components";
-import Alert from "../Alert";
 import EndMessageImg from "../EndMessageImg";
 
 const EndMessage = ({ dif }: { dif: number }) => {
@@ -13,10 +12,10 @@ const EndMessage = ({ dif }: { dif: number }) => {
 
   if (message === undefined) {
     message = MESSAGES[MESSAGES.length - 1];
-  }
+  } // Si el tiempo es superior a todos los 'max' de los mensajes (utiliza el ultimo).
 
   message.velocity
-    ? (distance = Math.round(diferenceInSeconds * diferenceInSeconds))
+    ? (distance = Math.round(diferenceInSeconds * message.velocity))
     : undefined;
 
   return (

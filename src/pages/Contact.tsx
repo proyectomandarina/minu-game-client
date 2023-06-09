@@ -53,11 +53,14 @@ export default function Contact() {
           <object data={assetsPath.logoVialEducation}></object>
         </IconsContainer>
       </ContactTop>
-      <InputInfoContainer>
-        <Input type="email" placeholder="Ingrese su email">Correo electronico</Input>
-        <Textarea placeholder="Ingrese su comentario">Comentarios</Textarea>
-      </InputInfoContainer>
-      <Button>Enviar</Button>
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfrAKZLdUZ6pSLfdL0MMg-X8AuUwXcthsxZ8iGYJs_fmqAEhg/viewform?embedded=true"
+        width="1000"
+        height="1000"
+        frameBorder="0"
+        marginHeight={0}
+        marginWidth={0}
+      >Cargando…</iframe>
     </ContactContainer>
   );
 }
