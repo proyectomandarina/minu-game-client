@@ -23,4 +23,6 @@ export const Button = styled.img<GameButtonProps>`
   box-shadow: ${props=>props.active ? `0px 0px 25px 20px ${theme.ButtonBgColor}` : null};
   box-shadow: ${props=>props.wrong ? `0px 0px 25px 20px #f00` : null};
   transition: box-shadow 0.2s ease-in;
+  user-select: none;
+  touch-action: none;
 `;
