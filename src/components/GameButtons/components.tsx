@@ -8,7 +8,7 @@ export const ButtonsContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 2em;
-  width: 40%;
+  width: 50%;
 
   @media screen and (min-width: 1024px) {
     grid-template-columns: 33% 33% 33%;

@@ -7,9 +7,14 @@
     color: #333333;
     font-family: 'Raleway', sans-serif;
     user-select: none;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-button, input, textarea, iframe {
+button,
+input,
+textarea,
+iframe {
     border: inherit;
     background-color: inherit;
     outline: inherit;
