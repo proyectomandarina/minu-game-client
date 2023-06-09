@@ -1,9 +1,6 @@
 import styled from "styled-components";
 import BackArrow from "../components/BackArrow";
-import Button from "../components/Button";
 import ContactTop from "../components/ContactTop";
-import Input from "../components/Input";
-import Textarea from "../components/Textarea";
 import TopBar from "../components/TopBar";
 import assetsPath from "../data/assets-path";
 import theme from "../data/theme";
@@ -29,16 +26,16 @@ const IconsContainer = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   object {
-    width: 10em;
+    width: 8em;
   }
 `;
 
-const InputInfoContainer = styled.div`
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+const FormIframe = styled.iframe`
+  width: 75vw;
+  height: 40vh;
+  display: inline;
 `
+
 
 export default function Contact() {
   return (
@@ -53,14 +50,9 @@ export default function Contact() {
           <object data={assetsPath.logoVialEducation}></object>
         </IconsContainer>
       </ContactTop>
-      <iframe
+      <FormIframe
         src="https://docs.google.com/forms/d/e/1FAIpQLSfrAKZLdUZ6pSLfdL0MMg-X8AuUwXcthsxZ8iGYJs_fmqAEhg/viewform?embedded=true"
-        width="1000"
-        height="1000"
-        frameBorder="0"
-        marginHeight={0}
-        marginWidth={0}
-      >Cargando…</iframe>
+      >Cargando…</FormIframe>
     </ContactContainer>
   );
 }
