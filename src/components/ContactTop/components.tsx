@@ -4,7 +4,7 @@ import assetsPath from "../../data/assets-path";
 export const Container = styled.div`
   position: relative;
   width: 100%;
-  padding-bottom: 68px;
+  padding-bottom: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
