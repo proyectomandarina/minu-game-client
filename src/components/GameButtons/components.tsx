@@ -17,12 +17,11 @@ export const ButtonsContainer = styled.div`
 
 export const Button = styled.img<GameButtonProps>`
   cursor: pointer;
-  border-radius: 9999px;
   width: 100%;
   height: 100%;
   box-shadow: ${props=>props.active ? `0px 0px 25px 20px ${theme.ButtonBgColor}` : null};
   box-shadow: ${props=>props.wrong ? `0px 0px 25px 20px #f00` : null};
   transition: box-shadow 0.2s ease-in;
-  user-select: none;
-  touch-action: none;
+  display: inline-block;
+  border-radius: 99999px;
 `;
