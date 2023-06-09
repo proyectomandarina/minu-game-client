@@ -72,6 +72,7 @@ export default function GameButtons() {
             wrong={wrongClick(id)}
             src={button}
             onClick={(e) => handleClick(e)}
+            onDragStart={()=>false}
           />
         );
       })}
