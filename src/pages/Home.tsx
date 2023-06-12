@@ -11,6 +11,7 @@ import { GameContext, setStep } from "../context";
 import { useContext, useEffect } from "react";
 import { INITIAL_CTX } from "../constants";
 import TopBar from "../components/TopBar";
+import Instagram from "../components/Instagram";
 
 const HomeContainer = styled.div`
   height: 100%;
@@ -80,6 +81,7 @@ function Home() {
         </HomeButtons>
       </MarginedHome>
       <Footer />
+      <Instagram/>
     </HomeContainer>
   );
 }

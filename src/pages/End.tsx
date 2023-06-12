@@ -10,6 +10,7 @@ import { STEPS } from "../types";
 import theme from "../data/theme";
 import Quit from "../components/Quit";
 import { formatMilliseconds } from "../constants";
+import Instagram from "../components/Instagram";
 
 const MIN_TIME_DIF_ALLOWED = 2000;
 
@@ -78,6 +79,7 @@ function EndGame() {
           Contacto
         </Button>
       </ButtonsContainer>
+      <Instagram/>
     </EndGameContainer>
   );
 }

@@ -27,6 +27,7 @@ const assetsPath = {
   car: "../assets/Auto.svg",
   bicicle: "../assets/Bicicleta.svg",
   person: "../assets/Persona.svg",
+  instagram: "../assets/instagram.svg"
 };
 
 export default assetsPath;
