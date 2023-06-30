@@ -20,6 +20,7 @@ const HomeContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 30px;
+  padding-top: 40px;
   img {
     width: 80%;
   }

@@ -20,6 +20,7 @@ const EndGameContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  padding-top: 40px;
 
   .roundTitle {
     color: ${theme.white};

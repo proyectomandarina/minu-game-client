@@ -4,7 +4,7 @@ const assetsPath = {
   languageIcon: "../assets/idioma.svg",
   arrowBack: '../assets/back.svg',
   arrowBottom: "../assets/bottom-arrow.svg",
-  dontDistract: "../assets/no-te-distraigas-blanco.png",
+  dontDistract: "../assets/no-te-distraigas-blanco.svg",
   startButton: "../assets/start-button.svg",
   footer: "../assets/footer.svg",
   logoVialEducation: "../assets/logo-educacion-vial.png",
