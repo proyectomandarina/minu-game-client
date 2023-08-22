@@ -6,6 +6,7 @@ export const INITIAL_CTX = {
   firstTime: 0,
   secondTime: 0,
   hasFinish: false,
+  currentLanguage: 'es'
 };
 
 export const formatMilliseconds = (milliseconds: number) => {

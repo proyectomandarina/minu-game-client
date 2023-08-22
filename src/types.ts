@@ -8,13 +8,15 @@ export enum STEPS {
   "END",
   "INSTRUCTIONS",
   "CONTACT",
-}
+} 
+
 
 export interface Ctx {
   step: STEPS;
   firstTime: number;
   secondTime: number;
   hasFinish: boolean;
+  currentLanguage: string;
 }
 
 export interface StateContext {

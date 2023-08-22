@@ -12,6 +12,7 @@ import { useContext, useEffect } from "react";
 import { INITIAL_CTX } from "../constants";
 import TopBar from "../components/TopBar";
 import Instagram from "../components/Instagram";
+import language from "../data/language";
 
 const HomeContainer = styled.div`
   height: 100%;
@@ -50,26 +51,15 @@ const MarginedHome = styled.div`
 
 function Home() {
   const { ctx, setCtx } = useContext(GameContext);
-
-  useEffect(() => {
-    setCtx(INITIAL_CTX);
-  });
-
-  const isLanguageSelector = LanguageSelector === undefined
-
+  
   return (
     <HomeContainer id="home-container">
       <TopBar position="flex-end">
-        {
-          isLanguageSelector
-           ? null
-           : <LanguageSelector/>
-        }
+        <LanguageSelector/> 
       </TopBar>
       <MarginedHome>
         <img src={assetsPath.dontDistract} />
         <Alert>
-          ¡CUANDO MANEJAMOS TODA NUESTRA ATENCION DEBE ESTAR EN LA CALLE
         </Alert>
         <StartButton step={STEPS.STEP_1}>COMENZAR</StartButton>
         <HomeButtons>

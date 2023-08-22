@@ -7,6 +7,10 @@ export const GameContext = React.createContext<StateContext>({
   setCtx: () => undefined,
 });
 
-export const setStep = (step:STEPS, ctx:Ctx) => {
-    return {...ctx, step: step};
+export const setStep = (step: STEPS, ctx: Ctx) => {
+  return { ...ctx, step: step };
 };
+
+export const changeLanguage = (newLanguage: string, ctx: Ctx) => {
+  return { ...ctx, currentLanguage: newLanguage };
+}
