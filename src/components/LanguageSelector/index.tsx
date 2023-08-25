@@ -3,6 +3,7 @@ import { GameContext, changeLanguage } from "../../context";
 import assetsPath from "../../data/assets-path"
 import language from "../../data/language"
 import { LanguageIcon, LanguageIconsContainer, LanguageSelectorContainer, LanguageText, LanguagesContainer } from "./components"
+import { LANGUAGES } from "../../types";
 
 export default function LanguageSelector() {
 
@@ -10,9 +11,11 @@ export default function LanguageSelector() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { ctx, setCtx } = useContext(GameContext);
 
+  const keysOfEnum = Object.keys(language) as LANGUAGES[]
+
   const languagesMenu = <LanguagesContainer >
     {
-      Object.keys(language).map((language, i) => {
+      keysOfEnum.map((language, i) => {
 
         const newContext = changeLanguage(language, ctx)
 

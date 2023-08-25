@@ -10,13 +10,18 @@ export enum STEPS {
   "CONTACT",
 } 
 
+export enum LANGUAGES {
+  ES = "ES",
+  POR = "POR"
+}
+
 
 export interface Ctx {
   step: STEPS;
   firstTime: number;
   secondTime: number;
   hasFinish: boolean;
-  currentLanguage: string;
+  currentLanguage: LANGUAGES;
 }
 
 export interface StateContext {

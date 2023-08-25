@@ -5,6 +5,9 @@ import TopBar from "../components/TopBar";
 import assetsPath from "../data/assets-path";
 import theme from "../data/theme";
 import { STEPS } from "../types";
+import { useContext } from "react";
+import { GameContext } from "../context";
+import language from "../data/language";
 
 const ContactContainer = styled.div`
   height: 100%;
@@ -38,13 +41,16 @@ const FormIframe = styled.iframe`
 
 
 export default function Contact() {
+
+  const { ctx, setCtx } = useContext(GameContext);
+
   return (
     <ContactContainer>
       <ContactTop>
         <TopBar position="flex-start">
           <BackArrow page={STEPS.HOME} color={theme.black} />
         </TopBar>
-        <ContactTitle>Dejanos tu opinion</ContactTitle>
+        <ContactTitle>{language[ctx.currentLanguage].contactTitle}</ContactTitle>
         <IconsContainer>
           <object data={assetsPath.logoMinuLegend}></object>
           <object data={assetsPath.logoVialEducation}></object>

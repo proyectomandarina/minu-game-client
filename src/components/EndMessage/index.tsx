@@ -1,8 +1,12 @@
 import { MESSAGES } from "../../constants";
 import { Container } from "./components";
 import EndMessageImg from "../EndMessageImg";
+import { GameContext } from "../../context";
+import { useContext } from "react";
 
 const EndMessage = ({ dif }: { dif: number }) => {
+  const { ctx, setCtx } = useContext(GameContext);
+  
   const diferenceInSeconds = dif / 1000;
   let distance;
 
@@ -29,9 +33,9 @@ const EndMessage = ({ dif }: { dif: number }) => {
       ) : (
         <></>
       )}
-      <h3>{message._title}</h3>
-      <h3>{distance && message.title ? message.title(distance) : null}</h3>
-      <p>{message.paragraph}</p>
+      <h3>{message._title?.[ctx.currentLanguage]}</h3>
+      <h3>{distance && message.title ? message.title(distance, ctx.currentLanguage) : null}</h3>
+      <p>{message.paragraph?.[ctx.currentLanguage]}</p>
     </Container>
   );
 };

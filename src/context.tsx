@@ -1,6 +1,6 @@
 import React from "react";
 import { INITIAL_CTX } from "./constants";
-import { Ctx, StateContext, STEPS } from "./types";
+import { Ctx, LANGUAGES, StateContext, STEPS } from "./types";
 
 export const GameContext = React.createContext<StateContext>({
   ctx: INITIAL_CTX,
@@ -11,6 +11,6 @@ export const setStep = (step: STEPS, ctx: Ctx) => {
   return { ...ctx, step: step };
 };
 
-export const changeLanguage = (newLanguage: string, ctx: Ctx) => {
+export const changeLanguage = (newLanguage: LANGUAGES, ctx: Ctx) => {
   return { ...ctx, currentLanguage: newLanguage };
 }
