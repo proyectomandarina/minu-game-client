@@ -1,12 +1,14 @@
 import assetsPath from "./data/assets-path";
 import { STEPS, LANGUAGES } from "./types";
 
+
+
 export const INITIAL_CTX = {
   step: STEPS.HOME,
   firstTime: 0,
   secondTime: 0,
   hasFinish: false,
-  currentLanguage: LANGUAGES.ES
+  currentLanguage: localStorage.getItem('language') || LANGUAGES.ES
 };
 
 export const formatMilliseconds = (milliseconds: number) => {

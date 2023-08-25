@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { GameContext, changeLanguage } from "../../context";
 import assetsPath from "../../data/assets-path"
 import language from "../../data/language"
@@ -10,6 +10,10 @@ export default function LanguageSelector() {
   const languagesLength = Object.keys(language).length
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { ctx, setCtx } = useContext(GameContext);
+
+  useEffect(()=>{
+    localStorage.setItem('language', ctx.currentLanguage)
+  }, [ctx.currentLanguage])
 
   const keysOfEnum = Object.keys(language) as LANGUAGES[]
 
