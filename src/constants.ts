@@ -8,7 +8,7 @@ export const INITIAL_CTX = {
   firstTime: 0,
   secondTime: 0,
   hasFinish: false,
-  currentLanguage: localStorage.getItem('language') || LANGUAGES.ES
+  currentLanguage: localStorage.getItem('language') as LANGUAGES || LANGUAGES.ES
 };
 
 export const formatMilliseconds = (milliseconds: number) => {
