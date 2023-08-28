@@ -3,7 +3,9 @@ import Counter from "../components/Counter";
 import GameButtons from "../components/GameButtons";
 import Quit from "../components/Quit";
 import theme from "../data/theme";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { GameContext } from "../context";
+import language from "../data/language";
 
 const RoundContainer = styled.div`
   min-height: 100vh;
@@ -36,6 +38,7 @@ function Round({ roundNumber }: { roundNumber: number }) {
   
   const [contador, setContador] = useState(0);
   const [contando, setContando] = useState(true);
+  const { ctx, setCtx } = useContext(GameContext);
 
   useEffect(() => {
     let intervalo:any;
@@ -55,7 +58,7 @@ function Round({ roundNumber }: { roundNumber: number }) {
     <RoundContainer>
       <Quit/>
       <CounterContainer>
-        <h2 className="roundTitle">Ronda {roundNumber}</h2>
+        <h2 className="roundTitle">{language[ctx.currentLanguage].roundTitle} {roundNumber}</h2>
         <Counter round={roundNumber} time={formatearTiempo(contador)} />
       </CounterContainer>
       <GameButtons/>

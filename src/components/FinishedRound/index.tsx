@@ -6,6 +6,7 @@ import Counter from "../Counter";
 import { formatearTiempo } from "../../pages/Round";
 import { useContext } from "react";
 import { GameContext } from "../../context";
+import language from "../../data/language";
 
 export default function FinishedRound() {
 
@@ -14,15 +15,13 @@ export default function FinishedRound() {
     return (
         <FinishedRoundContainer id='middle-container'>
             <Quit/>
-            <FinishedRoundTitle>Ronda finalizada</FinishedRoundTitle>
+            <FinishedRoundTitle>{language[ctx.currentLanguage].middleTitle}</FinishedRoundTitle>
             <Counter round={1} time={formatearTiempo(Math.floor(ctx.firstTime/1000))}/>
-            <StartButton step={STEPS.STEP_2}>COMENZAR SEGUNDA RONDA</StartButton>
+            <StartButton step={STEPS.STEP_2}>{language[ctx.currentLanguage].middleSubtitle}</StartButton>
             <FinishAlert>
-                <h2>SE VIENEN LAS DISTRACCIONES</h2>
+                <h2>{language[ctx.currentLanguage].middleAlertTitle}</h2>
                 <p>
-                    Ahora hay que estar atento a las consignas que te va a 
-                    decir tu capacitador y no perder la atencion a las luces 
-                    que se van a encender
+                    {language[ctx.currentLanguage].middleAlertDescription}
                 </p>
             </FinishAlert>
         </FinishedRoundContainer>

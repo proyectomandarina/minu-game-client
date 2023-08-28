@@ -8,10 +8,10 @@ import Footer from "../components/Footer";
 
 import { STEPS } from "../types";
 import { GameContext, setStep } from "../context";
-import { useContext, useEffect } from "react";
-import { INITIAL_CTX } from "../constants";
+import { useContext } from "react";
 import TopBar from "../components/TopBar";
 import Instagram from "../components/Instagram";
+import language from "../data/language";
 
 const HomeContainer = styled.div`
   height: 100%;
@@ -50,34 +50,24 @@ const MarginedHome = styled.div`
 
 function Home() {
   const { ctx, setCtx } = useContext(GameContext);
-
-  useEffect(() => {
-    setCtx(INITIAL_CTX);
-  });
-
-  const isLanguageSelector = LanguageSelector === undefined
-
+  
   return (
     <HomeContainer id="home-container">
       <TopBar position="flex-end">
-        {
-          isLanguageSelector
-           ? null
-           : <LanguageSelector/>
-        }
+        <LanguageSelector/> 
       </TopBar>
       <MarginedHome>
         <img src={assetsPath.dontDistract} />
         <Alert>
-          ¡CUANDO MANEJAMOS TODA NUESTRA ATENCION DEBE ESTAR EN LA CALLE
+          {language[ctx.currentLanguage].homeAlert}
         </Alert>
-        <StartButton step={STEPS.STEP_1}>COMENZAR</StartButton>
+        <StartButton step={STEPS.STEP_1}>{language[ctx.currentLanguage].startButton}</StartButton>
         <HomeButtons>
           <Button onClick={() => setCtx(setStep(STEPS.INSTRUCTIONS, ctx))}>
-            Instrucciones
+            {language[ctx.currentLanguage].instructionsButton}
           </Button>
           <Button onClick={() => setCtx(setStep(STEPS.CONTACT, ctx))}>
-            Contacto
+            {language[ctx.currentLanguage].contactButton}
           </Button>
         </HomeButtons>
       </MarginedHome>
