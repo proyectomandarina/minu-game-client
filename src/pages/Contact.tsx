@@ -21,6 +21,7 @@ const ContactContainer = styled.div`
 
 const ContactTitle = styled.h3`
   font-size: 2em;
+  text-align:center;
 `;
 
 const IconsContainer = styled.div`
