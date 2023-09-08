@@ -7,6 +7,9 @@ import LanguageSelector from "../components/LanguageSelector";
 import BackArrow from "../components/BackArrow";
 import { STEPS } from "../types";
 import Alert from "../components/Alert";
+import { useContext } from "react";
+import { GameContext } from "../context";
+import language from "../data/language";
 
 const Container = styled.div`
   height: 100%;
@@ -57,6 +60,9 @@ const RulesItem = styled.li`
 `;
 
 export default function Manual() {
+
+  const { ctx, setCtx } = useContext(GameContext);
+
   return (
     <Container id="manual-container">
       <TopBar>
@@ -67,37 +73,24 @@ export default function Manual() {
         <img src={assetsPath.dontDistract} />
       </ImgContainer>
       <RulesContainer>
-        <RulesTitle>Reglas del juego</RulesTitle>
+        <RulesTitle>{language[ctx.currentLanguage].rulesTitle}</RulesTitle>
         <RulesDescription>
-          El objetivo de este juego es darnos cuenta del tiempo que nos quita
-          cada distracción. Para eso, primero vas a jugar prestando atención.
-          Tenés que tocar los botones que se vayan iluminando lo más rápido que
-          puedas. Cada uno representa una situación que podrías encontrarte al
-          transitar. Un contador va a registrar el tiempo que te lleva completar
-          la secuencia. Después vas a volver a jugar, pero ahora vas a estar
-          siendo distraído. Lo ideal es que juegues con un celular aparte del
-          dispositivo en el que corre el juego. Otra persona te va a dar
-          consignas distractivas que tenés que cumplir:
+          {language[ctx.currentLanguage].rulesDescription.one}
         </RulesDescription>
-        <Alert>Distracciones</Alert>
+        <Alert>{language[ctx.currentLanguage].rulesAlert}</Alert>
         <RulesList>
-          <RulesItem>Escribi un Whatsapp que diga 'yendo'.</RulesItem>
-          <RulesItem>
-            Envia un audio de Whatsapp contando que queres cenar hoy.
-          </RulesItem>
-          <RulesItem>
-            Busca la direccion de tu casa en Google Maps o Waze y dale iniciar
-            al viaje.
-          </RulesItem>
-          <RulesItem>
-            Elegi una cancion en Spotify o aplicaciones de reproduccion de
-            musica y darle play.
-          </RulesItem>
+          {
+            language[ctx.currentLanguage].rulesExamples.map((example, i)=>{
+              return(
+                <RulesItem key={i}>
+                  {example}
+                </RulesItem>
+              )
+            })
+          }
         </RulesList>
         <RulesDescription>
-          Estos son solo ejemplos de las muchas cosas con las que alguien podria
-          ditraerse al manejar. Durante la segunda ronda, quien te distraiga
-          debe decirte dos consignas para que cumplas mientras jugas.
+          {language[ctx.currentLanguage].rulesDescription.two}
         </RulesDescription>
       </RulesContainer>
       <Footer />

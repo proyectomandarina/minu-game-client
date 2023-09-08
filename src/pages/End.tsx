@@ -11,6 +11,7 @@ import theme from "../data/theme";
 import Quit from "../components/Quit";
 import { formatMilliseconds } from "../constants";
 import Instagram from "../components/Instagram";
+import language from "../data/language";
 
 const MIN_TIME_DIF_ALLOWED = 2000;
 
@@ -64,20 +65,20 @@ function EndGame() {
   return (
     <EndGameContainer id="end-container">
       <Quit />
-      <h2 className="roundTitle">Fin del juego</h2>
+      <h2 className="roundTitle">{language[ctx.currentLanguage].endTitle}</h2>
       <Popup>
         <EndMessage dif={getFormatTime(ctx)} />
         <TimeWatchingThePhone>
-          <p>Tiempo viendo el telefono:</p>
+          <p>{language[ctx.currentLanguage].timeWatchingThePhone}</p>
           <p>{formatMilliseconds(getFormatTime(ctx))}</p>
         </TimeWatchingThePhone>
       </Popup>
       <ButtonsContainer>
         <Button onClick={() => setCtx(setStep(replayRedirect, ctx))}>
-          Volver a jugar
+          {language[ctx.currentLanguage].replayButton}
         </Button>
         <Button onClick={() => setCtx(setStep(STEPS.CONTACT, ctx))}>
-          Contacto
+          {language[ctx.currentLanguage].contactButton}
         </Button>
       </ButtonsContainer>
       <Instagram/>
