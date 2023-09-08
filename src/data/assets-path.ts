@@ -25,7 +25,7 @@ const assetsPath = {
   km110: "../assets/110.svg",
   km130: "../assets/130.svg",
   car: "../assets/Auto.svg",
-  bicicle: "../assets/Bicicleta.svg",
+  bicicle: "../assets/bici-final.svg",
   person: "../assets/Persona.svg",
   instagram: "../assets/instagram.svg"
 };
