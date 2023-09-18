@@ -1,11 +1,15 @@
-import assetsPath from "../../data/assets-path"
-import { FooterContainer, FooterSvg } from "./components"
+import assetsPath from "../../data/assets-path";
+import { FooterContainer, FooterLinks, FooterSvg } from "./components";
 
 export default function Footer() {
   return (
     <FooterContainer>
-        <FooterSvg data={assetsPath.logoMinuLegend}/>
-        <FooterSvg data={assetsPath.logoVialEducation}/>
+      <FooterLinks href="https://www.minu.org/index.html" target="_blank">
+        <FooterSvg src={assetsPath.logoMinuLegend} />
+      </FooterLinks>
+      <FooterLinks href="https://www.minu.org/PE-vial.html" target="_blank">
+        <FooterSvg src={assetsPath.logoVialEducation} />
+      </FooterLinks>
     </FooterContainer>
-  )
+  );
 }
