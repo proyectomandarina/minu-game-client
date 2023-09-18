@@ -7,11 +7,14 @@ export const ButtonsContainer = styled.div`
   grid-template-columns: 50% 50%;
   justify-content: center;
   align-items: center;
-  gap: 2em;
+  column-gap: 2em;
+  row-gap: 3em;
   width: 50%;
 
   @media screen and (min-width: 1024px) {
     grid-template-columns: 33% 33% 33%;
+    column-gap: 5em;
+    row-gap: 2em;
   }
 `;
 
@@ -19,9 +22,10 @@ export const Button = styled.img<GameButtonProps>`
   cursor: pointer;
   width: 100%;
   height: 100%;
-  box-shadow: ${props=>props.active ? `0px 0px 25px 20px ${theme.ButtonBgColor}` : null};
-  box-shadow: ${props=>props.wrong ? `0px 0px 25px 20px #f00` : null};
-  transition: box-shadow 0.2s ease-in;
+  box-shadow: ${(props) =>
+    props.active ? `0px 0px 25px 20px ${theme.ButtonBgColor}` : null};
+  box-shadow: ${(props) => (props.wrong ? `0px 0px 25px 20px #c42f2f` : null)};
+  transition: box-shadow 0.15s ease-in-out;
   display: inline-block;
   border-radius: 99999px;
 `;
