@@ -7,11 +7,14 @@ export const ButtonsContainer = styled.div`
   grid-template-columns: 50% 50%;
   justify-content: center;
   align-items: center;
-  gap: 2em;
+  column-gap: 5em;
+  row-gap: 2em;
   width: 50%;
 
   @media screen and (min-width: 1024px) {
     grid-template-columns: 33% 33% 33%;
+    column-gap: 2em;
+    row-gap: 5em;
   }
 `;
 
