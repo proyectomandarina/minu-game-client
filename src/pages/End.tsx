@@ -32,7 +32,9 @@ const EndGameContainer = styled.div`
 
 const ButtonsContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "replay contact"
+    "home home";
   gap: 10px;
   margin: 0 1em;
 `;
@@ -46,21 +48,17 @@ const TimeWatchingThePhone = styled.div`
 
 const validateTime = (ctx: Ctx): boolean =>
   ctx.secondTime - ctx.firstTime > MIN_TIME_DIF_ALLOWED;
-  
+
 const getFormatTime = (ctx: Ctx): number => {
-  if (validateTime(ctx)){
-    return ctx.secondTime - ctx.firstTime
+  if (validateTime(ctx)) {
+    return ctx.secondTime - ctx.firstTime;
   } else {
-    return Math.abs(ctx.secondTime - ctx.firstTime)
+    return Math.abs(ctx.secondTime - ctx.firstTime);
   }
 };
 
-
-
 function EndGame() {
   const { ctx, setCtx } = useContext(GameContext);
-  
-  const replayRedirect = validateTime(ctx) ? STEPS.HOME : STEPS.MIDDLE;
 
   return (
     <EndGameContainer id="end-container">
@@ -73,15 +71,37 @@ function EndGame() {
           <p>{formatMilliseconds(getFormatTime(ctx))}</p>
         </TimeWatchingThePhone>
       </Popup>
+      {}
       <ButtonsContainer>
-        <Button onClick={() => setCtx(setStep(replayRedirect, ctx))}>
-          {language[ctx.currentLanguage].replayButton}
-        </Button>
-        <Button onClick={() => setCtx(setStep(STEPS.CONTACT, ctx))}>
+        {validateTime(ctx) ? (
+          <Button
+            style={{ gridArea: "replay" }}
+            onClick={() => setCtx(setStep(STEPS.STEP_1, ctx))}
+          >
+            {language[ctx.currentLanguage].replayButton}
+          </Button>
+        ) : (
+          <Button
+            style={{ gridArea: "replay" }}
+            onClick={() => setCtx(setStep(STEPS.MIDDLE, ctx))}
+          >
+            {language[ctx.currentLanguage].replaySndCounter}
+          </Button>
+        )}
+        <Button
+          style={{ gridArea: "contact" }}
+          onClick={() => setCtx(setStep(STEPS.CONTACT, ctx))}
+        >
           {language[ctx.currentLanguage].contactButton}
         </Button>
+        <Button
+          style={{ gridArea: "home" }}
+          onClick={() => setCtx(setStep(STEPS.HOME, ctx))}
+        >
+          {language[ctx.currentLanguage].goHome}
+        </Button>
       </ButtonsContainer>
-      <Instagram/>
+      <Instagram />
     </EndGameContainer>
   );
 }
