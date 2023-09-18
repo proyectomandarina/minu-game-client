@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import theme from "../../data/theme";
 
-export const Container = styled.div`
-`;
+export const Container = styled.div``;
 
 export const Root = styled.div`
   position: fixed;
@@ -27,6 +26,7 @@ export const BgSvgContainer = styled.div`
 export const BgSvg = styled.object`
   width: 100%;
   object-fit: cover;
+  opacity: 0.4;
   @media screen and (min-width: 1024px) {
     &:first-child,
     &:nth-child(3) {
