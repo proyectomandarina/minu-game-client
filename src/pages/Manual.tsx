@@ -60,13 +60,12 @@ const RulesItem = styled.li`
 `;
 
 export default function Manual() {
-
   const { ctx, setCtx } = useContext(GameContext);
 
   return (
     <Container id="manual-container">
       <TopBar>
-        <BackArrow page={STEPS.HOME} color={theme.white}/>
+        <BackArrow page={STEPS.HOME} color={theme.white} />
         <LanguageSelector />
       </TopBar>
       <ImgContainer>
@@ -79,15 +78,9 @@ export default function Manual() {
         </RulesDescription>
         <Alert>{language[ctx.currentLanguage].rulesAlert}</Alert>
         <RulesList>
-          {
-            language[ctx.currentLanguage].rulesExamples.map((example, i)=>{
-              return(
-                <RulesItem key={i}>
-                  {example}
-                </RulesItem>
-              )
-            })
-          }
+          {language[ctx.currentLanguage].rulesExamples.map((example, i) => {
+            return <RulesItem key={i}>{example}</RulesItem>;
+          })}
         </RulesList>
         <RulesDescription>
           {language[ctx.currentLanguage].rulesDescription.two}
