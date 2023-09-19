@@ -9,7 +9,7 @@ import { setStep } from "../context";
 import { STEPS } from "../types";
 import theme from "../data/theme";
 import Quit from "../components/Quit";
-import { formatMilliseconds } from "../constants";
+import { formatMillisecondsToSeconds } from "../constants";
 import Instagram from "../components/Instagram";
 import language from "../data/language";
 
@@ -68,7 +68,7 @@ function EndGame() {
         <EndMessage dif={getFormatTime(ctx)} />
         <TimeWatchingThePhone>
           <p>{language[ctx.currentLanguage].timeWatchingThePhone}</p>
-          <p>{formatMilliseconds(getFormatTime(ctx))}</p>
+          <p>{formatMillisecondsToSeconds(getFormatTime(ctx))}</p>
         </TimeWatchingThePhone>
       </Popup>
       {}
