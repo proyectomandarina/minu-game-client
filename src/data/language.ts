@@ -31,7 +31,7 @@ const language = {
     timeWatchingThePhone: "Tiempo viendo el telefono",
     replayButton: "Jugar de nuevo",
     goHome: "Volver a inicio",
-    replaySndCounter: "Rehacer contador 2",
+    replaySndCounter: "Rehacer segunda ronda",
   },
   [LANGUAGES.POR]: {
     homeAlert: "¡QUANDO DIRIGIMOS, TODA NOSSA ATENÇÃO DEVE SER NA RUA!",
@@ -62,7 +62,7 @@ const language = {
     timeWatchingThePhone: "Tempo assistindo o telefone",
     replayButton: "Jogar de novo",
     goHome: "Voltar para começar",
-    replaySndCounter: "Refazer contador 2",
+    replaySndCounter: "Refazer segunda rodada",
   },
 };
 

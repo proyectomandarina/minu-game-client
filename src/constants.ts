@@ -11,17 +11,10 @@ export const INITIAL_CTX = {
   currentLanguage: localStorage.getItem('language') as LANGUAGES || LANGUAGES.ES
 };
 
-export const formatMilliseconds = (milliseconds: number) => {
-  const seconds = Math.floor((milliseconds / 1000) % 60);
-  const minutes = Math.floor((milliseconds / (1000 * 60)) % 60);
-  const hours = Math.floor((milliseconds / (1000 * 60 * 60)) % 24);
-  const millisecondsFormatted = Math.floor(milliseconds % 1000)
-    .toString()
-    .padStart(3, "0");
-  const secondsFormatted = seconds.toString().padStart(2, "0");
-  const minutesFormatted = minutes.toString().padStart(2, "0");
-  const hoursFormatted = hours.toString().padStart(2, "0");
-  return `${hoursFormatted}:${minutesFormatted}:${secondsFormatted}:${millisecondsFormatted}`;
+export const formatMillisecondsToSeconds = (milliseconds: number) => {
+  const seconds = Math.floor(milliseconds / 1000);
+  const secondsFormatted = seconds.toString().padStart(2);
+  return `${secondsFormatted}s`;
 };
 
 const TIME_WATCHING_PHONE = {
